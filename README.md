@@ -88,3 +88,8 @@ public class MyController : Controller
 ## Contributing
 
 Want a type of `Result<T>` that isn't here already? Create on yourself and contribute it back to the repository!
+
+## Contributors
+
+- Alex Dunn (https://github.com/SuavePirate)
+- Patrick Dunn (https://github.com/patwritescode)
