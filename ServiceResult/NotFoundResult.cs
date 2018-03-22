@@ -13,7 +13,7 @@ namespace ServiceResult
         {
             _error = error;
         }
-        public override ResultType Type => ResultType.NotFound;
+        public override ResultType ResultType => ResultType.NotFound;
 
         public override List<string> Errors => new List<string> { _error ?? "The entity you're looking for cannot be found" };
 

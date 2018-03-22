@@ -18,7 +18,7 @@ namespace ServiceResult
         {
 
         }
-        public override ResultType Type => ResultType.Unexpected;
+        public override ResultType ResultType => ResultType.Unexpected;
 
         public override List<string> Errors => new List<string> { _error ?? "There was an unexpected problem" };
 

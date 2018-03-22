@@ -13,7 +13,7 @@ namespace ServiceResult
         {
             _data = data;
         }
-        public override ResultType Type => ResultType.Ok;
+        public override ResultType ResultType => ResultType.Ok;
 
         public override List<string> Errors => new List<string>();
 

@@ -13,7 +13,7 @@ namespace ServiceResult
         {
             _error = error;
         }
-        public override ResultType Type => ResultType.Invalid;
+        public override ResultType ResultType => ResultType.Invalid;
 
         public override List<string> Errors => new List<string> { _error ?? "The input was invalid." };
 
