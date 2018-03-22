@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5EACDADD-1D3C-436B-BCC8-0DEA4994C30E}</ProjectGuid>
+    <Description>ServiceResult API Extensions to create action results from service results</Description>
+    <PackageId>ServiceResult.ApiExtensions</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>SauvePirate</Authors>
+    <DevelopmentDependency>false</DevelopmentDependency>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ServiceResult.ApiExtensions.NuGet</RootNamespace>
+    <UsePartialTypes>false</UsePartialTypes>
+    <AssemblyName>ServiceResult.ApiExtensions.NuGet</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Owners>SuavePirate</Owners>
+    <PackageTags>ServiceResult API WebAPI</PackageTags>
+    <Title>ServiceResult API Extensions</Title>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <Summary>ServiceResult API Extensions to create action results from service results</Summary>
+    <PackageProjectUrl>https://github.com/SuavePirate/ServiceResult</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/SuavePirate/ServiceResult/blob/master/LICENSE</PackageLicenseUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGet.Build.Packaging">
+      <Version>0.2.0</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceResult.ApiExtensions\ServiceResult.ApiExtensions.csproj">
+      <Project>{3F2920B9-A5EF-4CBD-A0BB-D2327DC94AE8}</Project>
+      <Name>ServiceResult.ApiExtensions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />
+</Project>

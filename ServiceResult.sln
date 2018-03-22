@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceResult", "ServiceRes
 EndProject
 Project("{5DD5E4FA-CB73-4610-85AB-557B54E96AA9}") = "ServiceResult.NuGet", "ServiceResult.NuGet\ServiceResult.NuGet.nuproj", "{1982C97A-D38F-4C97-A3EF-922DD1257F04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceResult.ApiExtensions", "ServiceResult.ApiExtensions\ServiceResult.ApiExtensions.csproj", "{3F2920B9-A5EF-4CBD-A0BB-D2327DC94AE8}"
+EndProject
+Project("{5DD5E4FA-CB73-4610-85AB-557B54E96AA9}") = "ServiceResult.ApiExtensions.NuGet", "ServiceResult.ApiExtensions.NuGet\ServiceResult.ApiExtensions.NuGet.nuproj", "{5EACDADD-1D3C-436B-BCC8-0DEA4994C30E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,5 +23,13 @@ Global
 		{1982C97A-D38F-4C97-A3EF-922DD1257F04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1982C97A-D38F-4C97-A3EF-922DD1257F04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1982C97A-D38F-4C97-A3EF-922DD1257F04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F2920B9-A5EF-4CBD-A0BB-D2327DC94AE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F2920B9-A5EF-4CBD-A0BB-D2327DC94AE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F2920B9-A5EF-4CBD-A0BB-D2327DC94AE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F2920B9-A5EF-4CBD-A0BB-D2327DC94AE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EACDADD-1D3C-436B-BCC8-0DEA4994C30E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EACDADD-1D3C-436B-BCC8-0DEA4994C30E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EACDADD-1D3C-436B-BCC8-0DEA4994C30E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EACDADD-1D3C-436B-BCC8-0DEA4994C30E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
