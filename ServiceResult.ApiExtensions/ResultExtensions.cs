@@ -14,7 +14,7 @@ namespace ServiceResult.ApiExtensions
         /// <returns>The action result.</returns>
         /// <param name="result">Service Result.</param>
         /// <typeparam name="T">The data type of the Result.</typeparam>
-        public static ActionResult FromActionResult<T>(this ControllerBase controller, Result<T> result)
+        public static ActionResult FromResult<T>(this ControllerBase controller, Result<T> result)
         {
             switch (result.ResultType)
             {

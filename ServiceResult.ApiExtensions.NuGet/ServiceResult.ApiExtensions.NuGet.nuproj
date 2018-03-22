@@ -7,7 +7,7 @@
     <ProjectGuid>{5EACDADD-1D3C-436B-BCC8-0DEA4994C30E}</ProjectGuid>
     <Description>ServiceResult API Extensions to create action results from service results</Description>
     <PackageId>ServiceResult.ApiExtensions</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
     <Authors>SauvePirate</Authors>
     <DevelopmentDependency>false</DevelopmentDependency>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
