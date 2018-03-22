@@ -46,7 +46,7 @@ Want to use this in your API and return the proper HTTP responses?
 ``` csharp
 protected ActionResult FromResult<T>(Result<T> result)
 {
-    switch (result.Type)
+    switch (result.ResultType)
     {
         case ResultType.Ok:
             return Ok(result.Data);
