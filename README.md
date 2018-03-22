@@ -8,6 +8,10 @@ It's on NuGet!
 ```
 Install-Package ServiceResult
 ```
+Or using the cli
+```
+dotnet add package ServiceResult
+```
 
 ## Usage
 
