@@ -42,31 +42,20 @@ catch(Exception ex)
 ```
 
 Want to use this in your API and return the proper HTTP responses?
-
-``` csharp
-protected ActionResult FromResult<T>(Result<T> result)
-{
-    switch (result.ResultType)
-    {
-        case ResultType.Ok:
-            return Ok(result.Data);
-        case ResultType.NotFound:
-            return NotFound(result.Errors);
-        case ResultType.Invalid:
-            return BadRequest(result.Errors);
-        case ResultType.Unexpected:
-            return BadRequest(result.Errors);
-        case ResultType.Unauthorized:
-            return Unauthorized();
-        default:
-            throw new Exception("An unhandled result has occurred as a result of a service call.");
-    }
-}
+We created a NuGet package for that too!
+```
+Install-Package ServiceResult.ApiExtensions
+```
+Or using the cli
+```
+dotnet add package ServiceResult.ApiExtensions
 ```
 
-Then use it in your controller endpoint
+Then use the extension method in your `Controller`:
 
 ``` csharp
+using ServiceResult.ApiExtensions;
+
 public class MyController : Controller
 {
     private readonly IMyService _service;
@@ -80,14 +69,10 @@ public class MyController : Controller
     {
         // returns a Result<T>
         var result = await _service.GetSomeData();
-        return FromResult(result);
+        return this.FromResult(result); // using extension
     }
 }
 ```
-
-## TODO
-
-- Create extension NuGet package for HTTP messages as above
 
 ## Contributing
 
