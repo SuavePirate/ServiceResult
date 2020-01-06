@@ -20,6 +20,8 @@ namespace ServiceResult.ApiExtensions
             {
                 case ResultType.Ok:
                     return controller.Ok(result.Data);
+                case ResultType.NoContent:
+                    return controller.NoContent();
                 case ResultType.NotFound:
                     return controller.NotFound(result.Errors);
                 case ResultType.Invalid:
