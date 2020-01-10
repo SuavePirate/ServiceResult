@@ -19,7 +19,10 @@ namespace ServiceResult.ApiExtensions
             switch (result.ResultType)
             {
                 case ResultType.Ok:
-                    return controller.Ok(result.Data);
+                    if (result.Data == null)
+                        return controller.NoContent();
+                    else
+                        return controller.Ok(result.Data);
                 case ResultType.NotFound:
                     return controller.NotFound(result.Errors);
                 case ResultType.Invalid:
