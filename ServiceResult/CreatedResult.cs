@@ -2,13 +2,10 @@
 
 namespace ServiceResult
 {
-    /// <summary>
-    /// Success result.
-    /// </summary>
-    public class SuccessResult<T> : Result<T>
+    public class CreatedResult<T> : Result<T>
     {
         private readonly T _data;
-        public SuccessResult(T data)
+        public CreatedResult(T data)
         {
             _data = data;
         }

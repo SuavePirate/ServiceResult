@@ -6,6 +6,11 @@
         Unexpected,
         NotFound,
         Unauthorized,
-        Invalid
+        Invalid,
+
+        Conflict,
+        Created,
+        Forbid,
+        UnprocessableEntity
     }
 }
