@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ServiceResult
 {
@@ -8,14 +9,25 @@ namespace ServiceResult
     /// </summary>
     public class NotFoundResult<T> : Result<T>
     {
-        private readonly string _error;
+        private List<string> _errors;
         public NotFoundResult(string error)
         {
-            _error = error;
+            _errors = new List<string>();
+
+            if (!string.IsNullOrEmpty(error))
+            {
+                _errors.Add(error);
+            }
         }
+
+        public NotFoundResult(List<string> errors)
+        {
+            _errors = errors;
+        }
+
         public override ResultType ResultType => ResultType.NotFound;
 
-        public override List<string> Errors => new List<string> { _error ?? "The entity you're looking for cannot be found" };
+        public override List<string> Errors => (_errors != null && _errors.Any()) ? _errors : new List<string> { "The entity you're looking for cannot be found." };
 
         public override T Data => default(T);
     }

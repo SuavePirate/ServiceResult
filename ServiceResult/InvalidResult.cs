@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ServiceResult
 {
@@ -8,14 +9,25 @@ namespace ServiceResult
     /// </summary>
     public class InvalidResult<T> : Result<T>
     {
-        private string _error;
+        private List<string> _errors;
         public InvalidResult(string error)
         {
-            _error = error;
+            _errors = new List<string>();
+
+            if (!string.IsNullOrEmpty(error))
+            { 
+                _errors.Add(error);
+            }
         }
+
+        public InvalidResult(List<string> errors)
+        { 
+            _errors = errors;
+        }
+
         public override ResultType ResultType => ResultType.Invalid;
 
-        public override List<string> Errors => new List<string> { _error ?? "The input was invalid." };
+        public override List<string> Errors => (_errors != null && _errors.Any()) ? _errors : new List<string> { "The input was invalid." };
 
         public override T Data => default(T);
     }
