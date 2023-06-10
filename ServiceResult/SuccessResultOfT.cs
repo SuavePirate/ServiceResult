@@ -6,15 +6,17 @@ namespace ServiceResult
     /// <summary>
     /// Success result.
     /// </summary>
-    public class SuccessResult : Result
+    public class SuccessResult<T> : Result<T>
     {
-        public SuccessResult()
+        private readonly T _data;
+        public SuccessResult(T data)
         {
-        
+            _data = data;
         }
-
         public override ResultType ResultType => ResultType.Ok;
 
         public override List<string> Errors => new List<string>();
+
+        public override T Data => _data;
     }
 }
